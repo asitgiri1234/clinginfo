@@ -9,34 +9,35 @@ export default function Home() {
     <div className="site">
       <PsychedelicBackground />
 
-      <header className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-6">
-        <a href="#top" className="font-[family-name:var(--font-display)] text-3xl leading-none">
+      <header className="mx-3 mt-4 flex max-w-6xl items-center justify-between gap-3 rounded-full border-2 border-[#fff6e4]/70 bg-[#120014]/75 px-4 py-3 backdrop-blur-md sm:mx-auto sm:w-[calc(100%-2.5rem)] sm:px-5">
+        <a href="#top" className="font-[family-name:var(--font-display)] text-2xl leading-none text-[#fff6e4] sm:text-3xl">
           Meltwave
         </a>
-        <nav className="flex items-center gap-3 text-sm font-semibold sm:text-base">
-          <a href="#flavors" className="rounded-full px-3 py-2 hover:bg-black/30">
+        <nav className="flex items-center gap-2 text-sm font-semibold sm:gap-3 sm:text-base">
+          <a href="#flavors" className="rounded-full px-2 py-2 text-[#fff6e4] hover:bg-white/10 sm:px-3">
             Flavors
           </a>
-          <a href="#flavors" className="sticker px-4 py-2 text-sm">
-            Taste the static
+          <a href="#flavors" className="sticker px-3 py-2 text-sm sm:px-4">
+            <span className="sm:hidden">Taste</span>
+            <span className="hidden sm:inline">Taste the static</span>
           </a>
         </nav>
       </header>
 
       <main id="top">
-        <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-4 lg:grid-cols-[1.15fr_0.85fr]">
-          <div>
-            <p className="mb-4 inline-block rounded-full border border-white/50 bg-black/40 px-4 py-1 text-sm font-semibold tracking-wide">
+        <section className="mx-auto grid w-full max-w-6xl items-center gap-10 overflow-hidden px-4 pb-16 pt-4 sm:px-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+          <div className="min-w-0 overflow-hidden rounded-[32px] border-[3px] border-[#fff6e4]/80 bg-[#120014]/75 p-5 shadow-[10px_12px_0_rgba(26,5,32,0.45)] backdrop-blur-md sm:p-8">
+            <p className="mb-4 inline-block rounded-full border border-white/50 bg-black/40 px-4 py-1 text-sm font-semibold tracking-wide text-[#fff6e4]">
               Chocolate house · est. in a very bright room
             </p>
-            <h1 className="aberration font-[family-name:var(--font-display)] text-6xl leading-[0.9] sm:text-8xl">
+            <h1 className="aberration wordmark font-[family-name:var(--font-display)]">
               <span className="melt">Meltwave</span>
             </h1>
-            <p className="mt-6 max-w-xl text-xl leading-snug text-[#fff6e4] sm:text-2xl">
+            <p className="mt-6 max-w-xl text-lg leading-snug text-[#fff6e4] sm:text-2xl">
               Six bars. One color wheel that refuses to stop. Dark, white, and
               milk chocolate dressed up like a poster from a dream you can eat.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <a href="#flavors" className="sticker px-6 py-3 text-lg">
                 Meet the six
               </a>
@@ -46,7 +47,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto h-[420px] w-full max-w-md">
+          <div className="relative mx-auto h-[340px] w-full max-w-full overflow-hidden sm:h-[420px] sm:max-w-md sm:overflow-visible">
             {flavors.slice(0, 3).map((flavor, index) => (
               <div
                 key={flavor.slug}
@@ -85,10 +86,10 @@ export default function Home() {
         </div>
 
         <section id="spectrum" className="mx-auto max-w-6xl px-5 py-16">
-          <h2 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl">
+          <h2 className="readable font-[family-name:var(--font-display)] text-4xl text-[#fff6e4] sm:text-5xl">
             The spectrum
           </h2>
-          <p className="mt-3 max-w-2xl text-lg text-[#fff6e4]/90">
+          <p className="readable mt-3 max-w-2xl text-lg text-[#fff6e4]">
             Every bar is poured the same way. The swirl is the only thing that
             changes — indigo, raspberry, mango, violet, lime, honey.
           </p>
@@ -109,10 +110,10 @@ export default function Home() {
 
         <section id="flavors" className="mx-auto max-w-6xl px-5 pb-20">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <h2 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl">
+            <h2 className="readable font-[family-name:var(--font-display)] text-4xl text-[#fff6e4] sm:text-5xl">
               Six flavors
             </h2>
-            <p className="max-w-sm text-[#fff6e4]/90">
+            <p className="readable max-w-sm text-[#fff6e4]">
               Same bar. Same camera. Completely different mood.
             </p>
           </div>
