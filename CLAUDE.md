@@ -14,10 +14,10 @@ Light gray page (`#f0f2f5`), white rounded cards, black Inter type, Meta blue (`
 
 Sections, in order:
 
-- Hero: “Software for real operations”, short line about websites, mobile apps, ERPs, and AI, studios in Noida, Pune, and Moradabad. A photo set of people helping each other sits beside the headline.
+- Hero: “Software for real operations”, short line about websites, mobile apps, ERPs, and AI, studios in Noida, Pune, and Moradabad. One photograph of real people working together sits beside the headline.
 - Three cards: custom software, engineers who stay, three offices.
 - Stats from the public Cling site: 32M+ lines of code, 350+ clients, 390+ projects.
-- Current Tech Focus: Cling logo animation, an advertisement film, and the surveillance model. Cleaner thumbnails than the live site. Each one opens the film Cling already publishes.
+- Current Tech Focus: Cling logo animation, an advertisement film, and the surveillance model. Thumbnails are photographs related to each topic. Each one opens the film Cling already publishes.
 - Services: web, mobile apps, ERP, AI, 3D, digital marketing.
 - Selected work, named from the public portfolio only: Seymour (real estate), Omson ERP, Phonologix, ePayLater.
 - Ways to work together: project, dedicated team, support.
@@ -54,4 +54,4 @@ Stack: Next.js 16 (App Router), React 19, Tailwind CSS 4, TypeScript. `create-ne
 
 5. **Images for presence, clients, and leadership.** User asked for those three sections to use the same kind of images as clinginfotech.com, and to follow that site’s layout. Global presence is a flag grid. Clients are the public homepage logos. Leadership uses the three published portraits on red circles. The rest of the page stays the white product layout. Commit `f728964`.
 
-6. **Hero photos and Current Tech Focus.** User wanted the hero less plain, with photos of people helping one another, and a tech-focus section with stronger thumbnails than the live site. The three films are not on a public YouTube channel, so the thumbnails open the films Cling hosts.
+6. **Hero photos and Current Tech Focus.** User wanted the hero less plain, with photos of people helping one another, and a tech-focus section with stronger thumbnails than the live site. The three films are not on a public YouTube channel, so the thumbnails open the films Cling hosts. The first generated pictures were replaced with photographs: one real team photo in the hero, a Blender screenshot for 3D, a film slate for the advertisement, and a wall of cameras for the surveillance film.

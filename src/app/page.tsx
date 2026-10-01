@@ -54,23 +54,11 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="grid grid-cols-5 gap-3">
-            <img
-              src="/hero/collaborate.jpg"
-              alt="Three colleagues working through a laptop together"
-              className="col-span-5 h-56 w-full rounded-3xl object-cover sm:h-72"
-            />
-            <img
-              src="/hero/help.jpg"
-              alt="One person helping a colleague at a laptop"
-              className="col-span-3 h-32 w-full rounded-3xl object-cover sm:h-40"
-            />
-            <img
-              src="/hero/review.jpg"
-              alt="A small group reviewing a plan together"
-              className="col-span-2 h-32 w-full rounded-3xl object-cover object-top sm:h-40"
-            />
-          </div>
+          <img
+            src="/hero/team.jpg"
+            alt="Three people working through a laptop together"
+            className="h-72 w-full rounded-3xl object-cover sm:h-96"
+          />
         </section>
 
         <section className="mx-auto grid max-w-6xl gap-4 px-5 py-8 md:grid-cols-3">
