@@ -7,7 +7,7 @@ function BandHeading({ title, line }: { title: string; line?: string }) {
     <div className="text-center">
       <h2 className="text-3xl font-semibold tracking-tight text-[#e2231a] sm:text-4xl">{title}</h2>
       <div className="mx-auto mt-3 flex h-[3px] w-16" aria-hidden="true">
-        <span className="h-full w-1/2 bg-[#14b8c7]" />
+        <span className="h-full w-1/2 bg-[#6aada8]" />
         <span className="h-full w-1/2 bg-[#1c1e21]" />
       </div>
       {line ? <p className="mx-auto mt-5 max-w-3xl text-lg text-[#1c1e21]">{line}</p> : null}
@@ -15,29 +15,34 @@ function BandHeading({ title, line }: { title: string; line?: string }) {
   );
 }
 
+const cardTones = ["#3d6f9a", "#2f7d82", "#6a8f71"];
+
 const icons = [
-  <svg key="card" viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="#0064e0" strokeWidth="1.6">
+  <svg key="card" viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="#3d6f9a" strokeWidth="1.6">
     <rect x="3" y="6" width="18" height="12" rx="2" />
     <path d="M3 10h18" />
   </svg>,
-  <svg key="team" viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="#0064e0" strokeWidth="1.6">
+  <svg key="team" viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="#2f7d82" strokeWidth="1.6">
     <circle cx="9" cy="8" r="3" />
     <circle cx="17" cy="9" r="2.2" />
     <path d="M3.5 19c.6-3 2.8-4.5 5.5-4.5S14 16 14.6 19" />
     <path d="M15 14.6c1.8.2 3.2 1.3 3.8 4.4" />
   </svg>,
-  <svg key="pin" viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="#0064e0" strokeWidth="1.6">
+  <svg key="pin" viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="#6a8f71" strokeWidth="1.6">
     <path d="M12 21s6-5.2 6-10a6 6 0 1 0-12 0c0 4.8 6 10 6 10z" />
     <circle cx="12" cy="11" r="2" />
   </svg>,
 ];
+
+const serviceTones = ["#3d6f9a", "#2f7d82", "#6a8f71", "#7d6b94", "#c4786a", "#5c7ea3"];
 
 export default function Home() {
   return (
     <div id="top">
       <SiteHeader />
       <main>
-        <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pt-12 pb-6 lg:grid-cols-2">
+        <section className="bg-[#e7f1f8]">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pt-12 pb-10 lg:grid-cols-2">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl font-medium tracking-tight text-[#1c1e21] sm:text-6xl">
               Software for real operations
@@ -59,6 +64,7 @@ export default function Home() {
             alt="Three people working through a laptop together"
             className="h-72 w-full rounded-3xl object-cover sm:h-96"
           />
+          </div>
         </section>
 
         <section className="mx-auto grid max-w-6xl gap-4 px-5 py-8 md:grid-cols-3">
@@ -67,7 +73,7 @@ export default function Home() {
             ["Engineers who stay", "A dedicated team can remain on the product after the first release."],
             ["Three offices", "Noida, Pune, and Moradabad. One engineering group."],
           ].map(([title, line], index) => (
-            <article key={title} className="card">
+            <article key={title} className="card border-t-4" style={{ borderTopColor: cardTones[index] }}>
               {icons[index]}
               <h2 className="mt-6 text-2xl font-medium tracking-tight">{title}</h2>
               <p className="mt-2 text-[#65676b]">{line}</p>
@@ -78,13 +84,13 @@ export default function Home() {
         <section className="mx-auto grid max-w-6xl gap-4 px-5 pb-8 sm:grid-cols-3">
           {stats.map((stat) => (
             <div key={stat.label} className="card text-center">
-              <p className="text-4xl font-medium tracking-tight">{stat.value}</p>
+              <p className="text-4xl font-medium tracking-tight text-[#2f7d82]">{stat.value}</p>
               <p className="mt-1 text-[#65676b]">{stat.label}</p>
             </div>
           ))}
         </section>
 
-        <section id="focus" className="bg-[#fff4f6]">
+        <section id="focus" className="bg-[#f6f1e8]">
           <div className="mx-auto max-w-6xl px-5 py-16">
             <BandHeading title="Current Tech Focus" />
             <ul className="mt-10 grid gap-10 md:grid-cols-2">
@@ -110,19 +116,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="mx-auto max-w-6xl px-5 py-16">
+        <section id="services" className="bg-[#e6f2ec]">
+          <div className="mx-auto max-w-6xl px-5 py-16">
           <h2 className="text-center text-4xl font-medium tracking-tight sm:text-5xl">Services</h2>
           <ul className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <li key={service.name} className="card">
+            {services.map((service, index) => (
+              <li key={service.name} className="card border-t-4" style={{ borderTopColor: serviceTones[index] }}>
                 <h3 className="text-2xl font-medium">{service.name}</h3>
                 <p className="mt-2 text-[#65676b]">{service.line}</p>
               </li>
             ))}
           </ul>
+          </div>
         </section>
 
-        <section id="work" className="mx-auto max-w-6xl px-5 py-8">
+        <section id="work" className="bg-[#f3f0f6]">
+          <div className="mx-auto max-w-6xl px-5 py-16">
           <h2 className="text-center text-4xl font-medium tracking-tight sm:text-5xl">Selected work</h2>
           <ul className="mt-8 grid gap-4 md:grid-cols-2">
             {works.map((work) => (
@@ -133,6 +142,7 @@ export default function Home() {
               </li>
             ))}
           </ul>
+          </div>
         </section>
 
         <section className="mx-auto max-w-6xl px-5 py-16">
@@ -147,7 +157,7 @@ export default function Home() {
           </ul>
         </section>
 
-        <div className="bg-[#fff4f6]">
+        <div className="bg-[#f7f0f2]">
           <section id="presence" className="mx-auto max-w-6xl px-5 py-16">
             <BandHeading
               title="Our Global Presence"

@@ -10,14 +10,14 @@ Local: `npm run dev`, then http://localhost:3000.
 
 ## What the page is now
 
-Light gray page (`#f0f2f5`), white rounded cards, black Inter type, Meta blue (`#0064e0`) for the logo mark, links, and the main button. Nav is a white bar: Cling, Services, Work, Global, Clients, Offices, Team, Contact.
+Light gray page (`#eef2f4`), white rounded cards, black Inter type, Meta blue (`#0064e0`) for links and the main button. A few full-width bands use calm tones: mist blue, sand, sage, lilac, and blush. Nav is a white bar with the real Cling wordmark from clinginfotech.com (`public/brand/logo.png`), then Services, Work, Global, Clients, Offices, Team, Contact.
 
 Sections, in order:
 
-- Hero: “Software for real operations”, short line about websites, mobile apps, ERPs, and AI, studios in Noida, Pune, and Moradabad. One photograph of real people working together sits beside the headline.
+- Hero: “Software for real operations”, short line about websites, mobile apps, ERPs, and AI, studios in Noida, Pune, and Moradabad. One photograph of real people working together sits beside the headline (`public/hero/team.jpg`, Brooke Cagle on Unsplash). Do not generate a replacement.
 - Three cards: custom software, engineers who stay, three offices.
 - Stats from the public Cling site: 32M+ lines of code, 350+ clients, 390+ projects.
-- Current Tech Focus: Cling logo animation, an advertisement film, and the surveillance model. Thumbnails are photographs related to each topic. Each one opens the film Cling already publishes.
+- Current Tech Focus: Cling logo animation, an advertisement film, and the surveillance model. Thumbnails are a Blender screenshot, a film slate, and a wall of cameras (`public/focus`). Each card opens the film Cling already hosts. Those three films are not on a public YouTube channel, so the links are the mp4s, not YouTube. Do not generate thumbnails.
 - Services: web, mobile apps, ERP, AI, 3D, digital marketing.
 - Selected work, named from the public portfolio only: Seymour (real estate), Omson ERP, Phonologix, ePayLater.
 - Ways to work together: project, dedicated team, support.
@@ -38,7 +38,12 @@ Do not invent client quotes, revenue numbers, or case-study metrics. Project nam
 - `src/app/globals.css` — page color, cards, form fields
 - `src/components/SiteHeader.tsx` — nav, mobile menu
 - `src/components/Studios.tsx` — office picker and contact form
-- `src/data/content.ts` — stats, services, work, clients, leaders, offices
+- `src/data/content.ts` — stats, services, work, countries, clients, leaders, offices, tech-focus films
+- `public/presence` — the twelve flags
+- `public/clients` — the homepage logos
+- `public/team` — the three published leadership portraits
+- `public/hero` — the one team photograph
+- `public/focus` — the three tech-focus thumbnails
 
 Stack: Next.js 16 (App Router), React 19, Tailwind CSS 4, TypeScript. `create-next-app` could not run in this folder directly because the folder is named “New folder”. The app was scaffolded elsewhere and moved here. `package.json` name is `clinginfo`.
 
@@ -54,4 +59,8 @@ Stack: Next.js 16 (App Router), React 19, Tailwind CSS 4, TypeScript. `create-ne
 
 5. **Images for presence, clients, and leadership.** User asked for those three sections to use the same kind of images as clinginfotech.com, and to follow that site’s layout. Global presence is a flag grid. Clients are the public homepage logos. Leadership uses the three published portraits on red circles. The rest of the page stays the white product layout. Commit `f728964`.
 
-6. **Hero photos and Current Tech Focus.** User wanted the hero less plain, with photos of people helping one another, and a tech-focus section with stronger thumbnails than the live site. The three films are not on a public YouTube channel, so the thumbnails open the films Cling hosts. The first generated pictures were replaced with photographs: one real team photo in the hero, a Blender screenshot for 3D, a film slate for the advertisement, and a wall of cameras for the surveillance film.
+6. **Hero photos and Current Tech Focus.** User wanted the hero less plain, with people helping one another, and a tech-focus section whose thumbnails were better than the live site and opened YouTube. No public Cling YouTube channel or those three films turned up, so the cards open the mp4s Cling hosts (logo animation and surveillance on clinginfotech.com, the advertisement on their S3 bucket). The first pass used generated pictures: a three-photo hero collage and illustrated thumbnails. Commit `7460917`, pushed to `master`.
+
+7. **Replace the generated pictures.** User said those images looked generated and asked for pictures from the web, with only one hero photo and real people in it. Hero is now a single Unsplash photograph of three people at a laptop. Tech focus uses a Wikimedia Blender screenshot, an Unsplash film slate, and an Unsplash wall of cameras. Commit `69d9f8e`, pushed to `master`.
+
+8. **Real logo and calmer color.** The blue “C” in the header was replaced with the wordmark Cling hosts at `clinginfotech.com/assests/icons/logo.png`. Section bands picked up mist, sand, sage, lilac, and blush so the page is less gray, without loud fills.

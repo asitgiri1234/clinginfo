@@ -17,9 +17,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-20 border-b border-[#e4e6eb] bg-white">
       <div className="mx-auto flex max-w-6xl items-center gap-8 px-5 py-3.5">
-        <a href="#top" className="flex items-center gap-2 text-[15px] font-semibold text-[#1c1e21]">
-          <span className="grid h-7 w-7 place-items-center rounded-full bg-[#0064e0] text-sm text-white">C</span>
-          Cling
+        <a href="#top" className="flex shrink-0 items-center">
+          <img src="/brand/logo.png" alt="Cling" className="h-10 w-auto" />
         </a>
         <nav className="hidden items-center gap-6 text-[15px] text-[#1c1e21] md:flex">
           {links.map((link) => (

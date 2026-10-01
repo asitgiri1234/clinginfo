@@ -40,7 +40,8 @@ export function Studios() {
 
   return (
     <>
-      <section id="offices" className="mx-auto max-w-6xl px-5 py-16">
+      <section id="offices" className="bg-[#e7f1f8]">
+        <div className="mx-auto max-w-6xl px-5 py-16">
         <h2 className="text-center text-4xl font-medium tracking-tight text-[#1c1e21] sm:text-5xl">
           Offices
         </h2>
@@ -65,9 +66,10 @@ export function Studios() {
             );
           })}
         </ul>
+        </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl px-5 pb-20">
+      <section id="contact" className="mx-auto max-w-6xl px-5 pt-16 pb-20">
         <div className="card mx-auto max-w-3xl">
           <h2 className="text-center text-4xl font-medium tracking-tight">Contact {office.city}</h2>
           <p className="mt-3 text-center text-[#65676b]">
