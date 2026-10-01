@@ -1,3 +1,24 @@
+export const focus = [
+  {
+    title: "3D Animation",
+    line: "Cling Logo animation",
+    thumb: "/focus/logo.jpg",
+    href: "https://clinginfotech.com/_next/static/videos/video2-6ead48029923b4c078ccb50482aae021.mp4",
+  },
+  {
+    title: "3D Animation",
+    line: "Advertisement video",
+    thumb: "/focus/ad.jpg",
+    href: "https://cling-3dvideos.s3.ap-south-1.amazonaws.com/WhatsApp+Video+2024-03-12+at+18.36.30.mp4",
+  },
+  {
+    title: "AI",
+    line: "The Surveillance Model identifies suspicious activity in the video",
+    thumb: "/focus/ai.jpg",
+    href: "https://clinginfotech.com/_next/static/videos/AI1-43dbc69bfc2881f47ddb05643c041577.mp4",
+  },
+];
+
 export const stats = [
   { value: "32M+", label: "Lines of code" },
   { value: "350+", label: "Clients" },

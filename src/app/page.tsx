@@ -1,6 +1,6 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { Studios } from "@/components/Studios";
-import { clients, countries, engagements, leaders, services, stats, works } from "@/data/content";
+import { clients, countries, engagements, focus, leaders, services, stats, works } from "@/data/content";
 
 function BandHeading({ title, line }: { title: string; line?: string }) {
   return (
@@ -37,20 +37,39 @@ export default function Home() {
     <div id="top">
       <SiteHeader />
       <main>
-        <section className="mx-auto max-w-6xl px-5 pt-16 pb-8 text-center">
-          <h1 className="text-4xl font-medium tracking-tight text-[#1c1e21] sm:text-6xl">
-            Software for real operations
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#65676b]">
-            Websites, mobile apps, ERPs, and AI. Built by Cling Info Tech in Noida, Pune, and Moradabad.
-          </p>
-          <div className="mt-6 flex justify-center gap-3">
-            <a href="#contact" className="rounded-full bg-[#0064e0] px-5 py-2.5 text-sm font-medium text-white">
-              Start a project
-            </a>
-            <a href="#work" className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[#0064e0]">
-              See the work
-            </a>
+        <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pt-12 pb-6 lg:grid-cols-2">
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl font-medium tracking-tight text-[#1c1e21] sm:text-6xl">
+              Software for real operations
+            </h1>
+            <p className="mx-auto mt-4 max-w-xl text-lg text-[#65676b] lg:mx-0">
+              Websites, mobile apps, ERPs, and AI. Built by Cling Info Tech in Noida, Pune, and Moradabad.
+            </p>
+            <div className="mt-6 flex justify-center gap-3 lg:justify-start">
+              <a href="#contact" className="rounded-full bg-[#0064e0] px-5 py-2.5 text-sm font-medium text-white">
+                Start a project
+              </a>
+              <a href="#work" className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[#0064e0]">
+                See the work
+              </a>
+            </div>
+          </div>
+          <div className="grid grid-cols-5 gap-3">
+            <img
+              src="/hero/collaborate.jpg"
+              alt="Three colleagues working through a laptop together"
+              className="col-span-5 h-56 w-full rounded-3xl object-cover sm:h-72"
+            />
+            <img
+              src="/hero/help.jpg"
+              alt="One person helping a colleague at a laptop"
+              className="col-span-3 h-32 w-full rounded-3xl object-cover sm:h-40"
+            />
+            <img
+              src="/hero/review.jpg"
+              alt="A small group reviewing a plan together"
+              className="col-span-2 h-32 w-full rounded-3xl object-cover object-top sm:h-40"
+            />
           </div>
         </section>
 
@@ -75,6 +94,32 @@ export default function Home() {
               <p className="mt-1 text-[#65676b]">{stat.label}</p>
             </div>
           ))}
+        </section>
+
+        <section id="focus" className="bg-[#fff4f6]">
+          <div className="mx-auto max-w-6xl px-5 py-16">
+            <BandHeading title="Current Tech Focus" />
+            <ul className="mt-10 grid gap-10 md:grid-cols-2">
+              {focus.map((item, index) => (
+                <li key={item.thumb} className={index === 2 ? "md:col-span-2 md:mx-auto md:w-[calc(50%-1.25rem)]" : ""}>
+                  <a href={item.href} target="_blank" rel="noreferrer" className="group block text-center">
+                    <span className="relative block overflow-hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(28,30,33,0.06)]">
+                      <img src={item.thumb} alt="" className="aspect-video w-full object-cover" />
+                      <span className="absolute right-3 bottom-3">
+                        <span className="grid h-12 w-12 place-items-center rounded-full bg-white/90 text-[#1c1e21] shadow-md transition group-hover:scale-105">
+                          <svg viewBox="0 0 24 24" className="ml-0.5 h-6 w-6" fill="currentColor" aria-hidden="true">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </span>
+                      </span>
+                    </span>
+                    <p className="mt-4 text-lg font-semibold text-[#1c1e21]">{item.title}</p>
+                    <p className="mt-1 text-sm text-[#65676b]">{item.line}</p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <section id="services" className="mx-auto max-w-6xl px-5 py-16">
