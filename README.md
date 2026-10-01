@@ -1,6 +1,6 @@
-# Meltwave
+# Cling Info Tech
 
-A psychedelic Next.js site for a fictional chocolate house. Six flavors, one spinning background, matching bar photos.
+A high-end Next.js homepage for Cling Info Tech. Clientele and studios follow the public site. Project names come from the published portfolio.
 
 ```bash
 npm install

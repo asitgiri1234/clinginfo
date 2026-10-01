@@ -1,167 +1,228 @@
-import Image from "next/image";
-import { PsychedelicBackground } from "@/components/PsychedelicBackground";
-import { flavors } from "@/data/flavors";
+import { SiteHeader } from "@/components/SiteHeader";
+import { Studios } from "@/components/Studios";
+import {
+  clients,
+  engagements,
+  industries,
+  labs,
+  leaders,
+  milestones,
+  process,
+  services,
+  stats,
+  works,
+} from "@/data/content";
 
-const ticker = [...flavors, ...flavors];
+const ticker = [...clients, ...clients];
 
 export default function Home() {
   return (
-    <div className="site">
-      <PsychedelicBackground />
+    <div id="top">
+      <SiteHeader />
 
-      <header className="mx-3 mt-4 flex max-w-6xl items-center justify-between gap-3 rounded-full border-2 border-[#fff6e4]/70 bg-[#120014]/75 px-4 py-3 backdrop-blur-md sm:mx-auto sm:w-[calc(100%-2.5rem)] sm:px-5">
-        <a href="#top" className="font-[family-name:var(--font-display)] text-2xl leading-none text-[#fff6e4] sm:text-3xl">
-          Meltwave
-        </a>
-        <nav className="flex items-center gap-2 text-sm font-semibold sm:gap-3 sm:text-base">
-          <a href="#flavors" className="rounded-full px-2 py-2 text-[#fff6e4] hover:bg-white/10 sm:px-3">
-            Flavors
-          </a>
-          <a href="#flavors" className="sticker px-3 py-2 text-sm sm:px-4">
-            <span className="sm:hidden">Taste</span>
-            <span className="hidden sm:inline">Taste the static</span>
-          </a>
-        </nav>
-      </header>
-
-      <main id="top">
-        <section className="mx-auto grid w-full max-w-6xl items-center gap-10 overflow-hidden px-4 pb-16 pt-4 sm:px-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
-          <div className="min-w-0 overflow-hidden rounded-[32px] border-[3px] border-[#fff6e4]/80 bg-[#120014]/75 p-5 shadow-[10px_12px_0_rgba(26,5,32,0.45)] backdrop-blur-md sm:p-8">
-            <p className="mb-4 inline-block rounded-full border border-white/50 bg-black/40 px-4 py-1 text-sm font-semibold tracking-wide text-[#fff6e4]">
-              Chocolate house · est. in a very bright room
-            </p>
-            <h1 className="aberration wordmark font-[family-name:var(--font-display)]">
-              <span className="melt">Meltwave</span>
+      <main>
+        <section className="mx-auto grid max-w-6xl items-end gap-14 px-5 pt-16 pb-20 lg:grid-cols-[1.15fr_0.85fr]">
+          <div>
+            <p className="eyebrow">Cling Info Tech · Est. 2019</p>
+            <h1 className="display mt-5 text-5xl sm:text-7xl">
+              Software for companies that intend to last.
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-snug text-[#fff6e4] sm:text-2xl">
-              Six bars. One color wheel that refuses to stop. Dark, white, and
-              milk chocolate dressed up like a poster from a dream you can eat.
+            <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
+              Websites, applications, and ERPs, plus the team to keep them.
+              Studios in Noida, Pune, and Moradabad.
             </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <a href="#flavors" className="sticker px-6 py-3 text-lg">
-                Meet the six
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#contact" className="bg-[var(--ivory)] px-5 py-3 text-sm font-semibold text-[#090a0b]">
+                Start a project
               </a>
-              <a href="#spectrum" className="sticker sticker-ghost px-6 py-3 text-lg">
-                See the spectrum
+              <a href="#work" className="border border-[var(--line)] px-5 py-3 text-sm">
+                Selected work
               </a>
             </div>
           </div>
 
-          <div className="relative mx-auto h-[340px] w-full max-w-full overflow-hidden sm:h-[420px] sm:max-w-md sm:overflow-visible">
-            {flavors.slice(0, 3).map((flavor, index) => (
-              <div
-                key={flavor.slug}
-                className="absolute overflow-hidden rounded-[28px] border-[3px] border-[#fff6e4] shadow-[12px_14px_0_rgba(26,5,32,0.4)]"
-                style={{
-                  width: "72%",
-                  aspectRatio: "1 / 1",
-                  left: `${index * 14}%`,
-                  top: `${index * 46}px`,
-                  rotate: `${index * 7 - 8}deg`,
-                  zIndex: 3 - index,
-                }}
-              >
-                <Image
-                  src={flavor.image}
-                  alt={`${flavor.name} chocolate bar`}
-                  fill
-                  priority={index === 0}
-                  sizes="320px"
-                  className="object-cover"
-                />
+          <aside className="frame p-5 sm:p-6">
+            <div className="flex items-center justify-between text-xs tracking-[0.16em] text-[var(--muted)] uppercase">
+              <span>Selected</span>
+              <span>Seymour</span>
+            </div>
+            <div className="mt-5 border border-[var(--line)] p-5">
+              <p className="text-xs tracking-[0.16em] text-[var(--gold)] uppercase">Real estate</p>
+              <p className="display mt-3 text-4xl">Property, on one record.</p>
+              <div className="mt-6 grid grid-cols-3 gap-3 text-sm">
+                {["Inventory", "People", "Daily log"].map((item) => (
+                  <div key={item} className="border border-[var(--line)] px-3 py-4 text-[var(--muted)]">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="mt-4 text-sm leading-6 text-[var(--muted)]">
+              Seymour, a real estate management system. Operational software with a record the
+              company can still explain.
+            </p>
+          </aside>
+        </section>
+
+        <section className="border-y border-[var(--line)]">
+          <dl className="mx-auto grid max-w-6xl sm:grid-cols-3">
+            {stats.map((stat) => (
+              <div key={stat.label} className="border-[var(--line)] px-5 py-8 sm:border-l sm:first:border-l-0">
+                <dt className="text-sm text-[var(--muted)]">{stat.label}</dt>
+                <dd className="display mt-2 text-5xl">{stat.value}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         </section>
 
-        <div className="marquee" aria-hidden="true">
-          <div className="marquee-track font-[family-name:var(--font-display)] text-2xl">
-            {ticker.map((flavor, index) => (
-              <span key={`${flavor.slug}-${index}`} className="flex items-center gap-10">
-                {flavor.name}
-                <span className="text-[#ffe14a]">✦</span>
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <section id="spectrum" className="mx-auto max-w-6xl px-5 py-16">
-          <h2 className="readable font-[family-name:var(--font-display)] text-4xl text-[#fff6e4] sm:text-5xl">
-            The spectrum
+        <section id="work" className="mx-auto max-w-6xl px-5 py-24">
+          <p className="eyebrow">Selected work</p>
+          <h2 className="display mt-3 max-w-2xl text-4xl sm:text-5xl">
+            Work with a name on it.
           </h2>
-          <p className="readable mt-3 max-w-2xl text-lg text-[#fff6e4]">
-            Every bar is poured the same way. The swirl is the only thing that
-            changes — indigo, raspberry, mango, violet, lime, honey.
-          </p>
-          <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {flavors.map((flavor) => (
-              <li key={flavor.slug}>
-                <a
-                  href={`#${flavor.slug}`}
-                  className="block rounded-2xl border-2 border-[#1a0520] px-3 py-4 text-center font-bold text-[#1a0520] shadow-[4px_4px_0_#1a0520]"
-                  style={{ background: flavor.glow }}
-                >
-                  {flavor.name}
-                </a>
+          <ul className="mt-12 divide-y divide-[var(--line)] border-y border-[var(--line)]">
+            {works.map((work) => (
+              <li key={work.name} className="grid gap-3 py-7 md:grid-cols-[220px_220px_1fr] md:items-baseline">
+                <h3 className="font-[family-name:var(--font-serif)] text-3xl">{work.name}</h3>
+                <p className="text-sm tracking-[0.12em] text-[var(--gold)] uppercase">{work.kind}</p>
+                <p className="text-[var(--muted)]">{work.line}</p>
               </li>
             ))}
           </ul>
         </section>
 
-        <section id="flavors" className="mx-auto max-w-6xl px-5 pb-20">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <h2 className="readable font-[family-name:var(--font-display)] text-4xl text-[#fff6e4] sm:text-5xl">
-              Six flavors
-            </h2>
-            <p className="readable max-w-sm text-[#fff6e4]">
-              Same bar. Same camera. Completely different mood.
-            </p>
+        <section id="practice" className="border-t border-[var(--line)] bg-[#0c0d0f]">
+          <div className="mx-auto max-w-6xl px-5 py-24">
+            <p className="eyebrow">Practice</p>
+            <h2 className="display mt-3 text-4xl sm:text-5xl">What the firm is hired for.</h2>
+            <ul className="mt-12 grid gap-px bg-[var(--line)] sm:grid-cols-2 lg:grid-cols-3">
+              {services.map((service) => (
+                <li key={service.name} className="bg-[#0c0d0f] p-6">
+                  <p className="text-xs text-[var(--gold)]">{service.index}</p>
+                  <h3 className="mt-4 font-[family-name:var(--font-serif)] text-3xl">{service.name}</h3>
+                  <p className="mt-3 text-[var(--muted)]">{service.line}</p>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {flavors.map((flavor, index) => (
-              <li key={flavor.slug} id={flavor.slug}>
-                <article
-                  className="card overflow-hidden rounded-[28px]"
-                  style={{ rotate: index % 2 === 0 ? "-1.5deg" : "1.5deg" }}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src={flavor.image}
-                      alt={`${flavor.name}, a ${flavor.base.toLowerCase()} chocolate bar`}
-                      fill
-                      sizes="(max-width: 640px) 100vw, 33vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="space-y-3 p-5">
-                    <div className="flex items-center justify-between gap-3">
-                      <h3 className="font-[family-name:var(--font-display)] text-3xl leading-none">
-                        {flavor.name}
-                      </h3>
-                      <span
-                        className="rounded-full px-3 py-1 text-sm font-bold text-[#1a0520]"
-                        style={{ background: flavor.glow }}
-                      >
-                        {flavor.cocoa}
-                      </span>
-                    </div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.16em]" style={{ color: flavor.ink }}>
-                      {flavor.base} chocolate
-                    </p>
-                    <p className="text-lg leading-snug">{flavor.line}</p>
-                  </div>
-                </article>
+        </section>
+
+        <section className="mx-auto grid max-w-6xl gap-12 px-5 py-24 lg:grid-cols-2">
+          <div>
+            <p className="eyebrow">Engagements</p>
+            <h2 className="display mt-3 text-4xl">How a client hires Cling.</h2>
+            <ul className="mt-8 space-y-6">
+              {engagements.map((item) => (
+                <li key={item.name} className="border-t border-[var(--line)] pt-5">
+                  <h3 className="text-xl">{item.name}</h3>
+                  <p className="mt-2 text-[var(--muted)]">{item.line}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="eyebrow">Method</p>
+            <h2 className="display mt-3 text-4xl">Four steps. Then it stays up.</h2>
+            <ol className="mt-8 grid gap-4 sm:grid-cols-2">
+              {process.map((step, index) => (
+                <li key={step.name} className="border border-[var(--line)] p-5">
+                  <p className="text-xs text-[var(--gold)]">0{index + 1}</p>
+                  <h3 className="mt-3 text-xl">{step.name}</h3>
+                  <p className="mt-2 text-sm text-[var(--muted)]">{step.line}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section id="clients">
+          <div className="mx-auto max-w-6xl px-5 pt-8">
+            <p className="eyebrow">Clientele</p>
+            <h2 className="display mt-3 text-4xl sm:text-5xl">Companies already on the books.</h2>
+          </div>
+          <div className="marquee mt-10" aria-hidden="true">
+            <div className="marquee-track">
+              {ticker.map((name, index) => (
+                <span key={`${name}-${index}`} className="client-name">
+                  {name}
+                </span>
+              ))}
+            </div>
+          </div>
+          <ul className="mx-auto mt-8 flex max-w-6xl flex-wrap gap-3 px-5 pb-20">
+            {industries.map((industry) => (
+              <li key={industry} className="border border-[var(--line)] px-3 py-1 text-sm text-[var(--muted)]">
+                {industry}
               </li>
             ))}
           </ul>
         </section>
+
+        <section className="border-t border-[var(--line)]">
+          <div className="mx-auto grid max-w-6xl gap-10 px-5 py-24 lg:grid-cols-2">
+            <div>
+              <p className="eyebrow">Current focus</p>
+              <h2 className="display mt-3 text-4xl">The lab.</h2>
+            </div>
+            <ul className="space-y-8">
+              {labs.map((lab) => (
+                <li key={lab.name} className="border-t border-[var(--line)] pt-6">
+                  <h3 className="font-[family-name:var(--font-serif)] text-3xl">{lab.name}</h3>
+                  <p className="mt-3 text-[var(--muted)]">{lab.line}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="border-t border-[var(--line)] bg-[#0c0d0f]">
+          <div className="mx-auto max-w-6xl px-5 py-24">
+            <p className="eyebrow">The firm</p>
+            <h2 className="display mt-3 max-w-3xl text-4xl sm:text-5xl">
+              Founded in Noida in 2019. Still close to the work.
+            </h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
+              Cling builds websites, applications, ERPs, and the teams that run them. The point is
+              a system a company can still explain after the project ends.
+            </p>
+            <ol className="mt-12 grid gap-6 md:grid-cols-4">
+              {milestones.map((item) => (
+                <li key={item.year}>
+                  <p className="font-[family-name:var(--font-serif)] text-3xl text-[var(--gold)]">{item.year}</p>
+                  <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{item.line}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section id="leadership" className="mx-auto max-w-6xl px-5 py-24">
+          <p className="eyebrow">Leadership</p>
+          <h2 className="display mt-3 text-4xl sm:text-5xl">Founder and directors.</h2>
+          <ul className="mt-12 grid gap-6 md:grid-cols-3">
+            {leaders.map((leader) => (
+              <li key={leader.name} className="border border-[var(--line)] p-6">
+                <p className="flex h-16 w-16 items-center justify-center border border-[var(--gold)] font-[family-name:var(--font-serif)] text-xl text-[var(--gold)]">
+                  {leader.initials}
+                </p>
+                <h3 className="mt-8 font-[family-name:var(--font-serif)] text-3xl">{leader.name}</h3>
+                <p className="mt-2 text-sm tracking-[0.12em] text-[var(--muted)] uppercase">{leader.role}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <Studios />
       </main>
 
-      <footer className="border-t border-white/20 bg-black/40 px-5 py-8 text-center">
-        <p className="font-[family-name:var(--font-display)] text-3xl">Meltwave</p>
-        <p className="mt-2 text-[#fff6e4]/80">
-          Psychedelic chocolate. The room spins. The bar stays put.
-        </p>
+      <footer className="border-t border-[var(--line)] px-5 py-10">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="font-[family-name:var(--font-serif)] text-3xl">Cling</p>
+            <p className="mt-2 text-sm text-[var(--muted)]">Cling Info Tech Works Private Limited</p>
+          </div>
+          <p className="text-sm text-[var(--muted)]">Noida · Pune · Moradabad</p>
+        </div>
       </footer>
     </div>
   );
