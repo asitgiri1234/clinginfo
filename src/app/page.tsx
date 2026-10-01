@@ -1,5 +1,7 @@
+import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Studios } from "@/components/Studios";
+import { Testimonials } from "@/components/Testimonials";
 import { clients, countries, engagements, focus, leaders, services, stats, works } from "@/data/content";
 
 function BandHeading({ title, line }: { title: string; line?: string }) {
@@ -205,14 +207,19 @@ export default function Home() {
           </ul>
         </section>
 
+        <section id="testimonials" className="bg-[#f7f0f2]">
+          <div className="mx-auto max-w-6xl px-5 py-16">
+            <BandHeading
+              title="Testimonials"
+              line="Your Voice, Our Pride! Dive into the heartfelt accounts of our valued patrons. From life-changing experiences to exceptional service, their stories illuminate the essence of our commitment. Join our family of satisfied customers and witness firsthand the transformative power of our offerings. Your satisfaction is our greatest achievement!"
+            />
+            <Testimonials />
+          </div>
+        </section>
+
         <Studios />
       </main>
-      <footer className="border-t border-[#e4e6eb] bg-white px-5 py-8">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 text-sm text-[#65676b]">
-          <p className="font-medium text-[#1c1e21]">Cling Info Tech Works Private Limited</p>
-          <p>Noida · Pune · Moradabad</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

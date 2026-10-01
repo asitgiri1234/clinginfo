@@ -24,8 +24,10 @@ Sections, in order:
 - Global presence: the twelve markets from clinginfotech.com, with their flags.
 - Clients: the homepage logo set from clinginfotech.com, in white cards. No invented logos.
 - Leadership: Ramesh Singh (Co-founder & Director), Ashi Gupta (Managing Director), Akshay Gupta (CEO), using the portraits published on clinginfotech.com. No generated portraits of real people.
+- Testimonials: the ten reviews published on clinginfotech.com, with those portraits (`public/testimonials`). The homepage API returns no extra reviews.
 - Offices: Noida head office, Pune, Moradabad. Clicking a card selects it for the form.
 - Contact form. It does not post to a backend. It opens a `mailto:` to info@clinginfotech.com. Phone on the site: +91 8264469132.
+- Footer: the live-site set — logo, Instagram, LinkedIn, Noida, Pune, Moradabad, and Guinea addresses, phone, email, quick links, the services list, and the copyright line. Pages this homepage does not include link to clinginfotech.com. A WhatsApp button opens the same chat link.
 
 Copy is plain. Do not add gold, serifs, uppercase tracking labels, marquees, fake maps, or lines that talk about the design itself (“no invented results”, “a record the company can still explain”).
 
@@ -37,6 +39,8 @@ Do not invent client quotes, revenue numbers, or case-study metrics. Project nam
 - `src/app/layout.tsx` — Inter, metadata
 - `src/app/globals.css` — page color, cards, form fields
 - `src/components/SiteHeader.tsx` — nav, mobile menu
+- `src/components/SiteFooter.tsx` — footer and WhatsApp button
+- `src/components/Testimonials.tsx` — review carousel
 - `src/components/Studios.tsx` — office picker and contact form
 - `src/data/content.ts` — stats, services, work, countries, clients, leaders, offices, tech-focus films
 - `public/presence` — the twelve flags
@@ -44,6 +48,8 @@ Do not invent client quotes, revenue numbers, or case-study metrics. Project nam
 - `public/team` — the three published leadership portraits
 - `public/hero` — the one team photograph
 - `public/focus` — the three tech-focus thumbnails
+- `public/testimonials` — the published review portraits
+- `public/brand` — the Cling wordmark
 
 Stack: Next.js 16 (App Router), React 19, Tailwind CSS 4, TypeScript. `create-next-app` could not run in this folder directly because the folder is named “New folder”. The app was scaffolded elsewhere and moved here. `package.json` name is `clinginfo`.
 
@@ -64,3 +70,5 @@ Stack: Next.js 16 (App Router), React 19, Tailwind CSS 4, TypeScript. `create-ne
 7. **Replace the generated pictures.** User said those images looked generated and asked for pictures from the web, with only one hero photo and real people in it. Hero is now a single Unsplash photograph of three people at a laptop. Tech focus uses a Wikimedia Blender screenshot, an Unsplash film slate, and an Unsplash wall of cameras. Commit `69d9f8e`, pushed to `master`.
 
 8. **Real logo and calmer color.** The blue “C” in the header was replaced with the wordmark Cling hosts at `clinginfotech.com/assests/icons/logo.png`. Section bands picked up mist, sand, sage, lilac, and blush so the page is less gray, without loud fills.
+
+9. **Testimonials and footer.** The ten homepage reviews and their portraits were copied from clinginfotech.com. The footer lists the same offices (including Guinea), quick links, services, social accounts, phone, email, and copyright line.

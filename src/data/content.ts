@@ -146,6 +146,75 @@ export const works = [
   },
 ];
 
+export const testimonials: { name: string; role?: string; photo: string; quote: string }[] = [
+  {
+    name: "Praveen Shetty",
+    photo: "/testimonials/praveen.png",
+    quote:
+      "Working with Cling Info Tech was a game-changer for our business. Their expertise and dedication helped us achieve remarkable results. I highly recommend them to anyone looking for top-notch service",
+  },
+  {
+    name: "Swatee Agrawal",
+    role: "Founder - Piaah.com",
+    photo: "/testimonials/swatee.jpeg",
+    quote:
+      "Cling Info Tech' professionalism and efficiency surpassed our expectations, understanding our needs exceptionally well. Rarely do we find such a reliable partner in today's market. Their dedication sets them apart.",
+  },
+  {
+    name: "Elizabeth Jean Thomas",
+    role: "Founder - Speech Ally",
+    photo: "/testimonials/elizabeth.jpeg",
+    quote:
+      "Choosing Cling Info Tech was one of the best decisions we made. Their team's creativity and strategic approach transformed our vision into reality. I'm grateful for their outstanding support and guidance throughout the process.",
+  },
+  {
+    name: "Ashish Kumar",
+    role: "Director - Vibgyorweb",
+    photo: "/testimonials/ashish.jpg",
+    quote:
+      "Cling Info Tech exceeded all our expectations with their professionalism and efficiency. Their understanding of our requirements was exceptional, and they consistently went above and beyond to deliver outstanding results.",
+  },
+  {
+    name: "Shams Tabrez",
+    role: "Director - Litmus Ink",
+    photo: "/testimonials/shams.png",
+    quote:
+      "Working with Cling Info Tech was an absolute pleasure throughout. In today's fiercely competitive market, finding a partner who truly understands your needs is invaluable, and Cling Info Tech excels exceptionally in this regard.",
+  },
+  {
+    name: "Arif",
+    photo: "/testimonials/testimonial-03.jpeg",
+    quote:
+      "Working with Cling Info Tech was a game-changer for our business. Their expertise and dedication helped us achieve remarkable results. I highly recommend them to anyone looking for top-notch service",
+  },
+  {
+    name: "Aurko Bhattacharya",
+    role: "Co-founder - ePayLater",
+    photo: "/testimonials/aurko.jpeg",
+    quote:
+      "Working with Cling Info Tech was an absolute pleasure throughout. In today's fiercely competitive market, finding a partner who truly understands your needs is invaluable, and Cling Info Tech excels exceptionally in this regard.",
+  },
+  {
+    name: "Ankit Solanki",
+    photo: "/testimonials/testimonial-03.jpeg",
+    quote:
+      "Choosing Cling Info Tech was one of the best decisions we made. Their team's creativity and strategic approach transformed our vision into reality. I'm grateful for their outstanding support and guidance throughout the process.",
+  },
+  {
+    name: "Gourav Singh",
+    role: "CFO - Webisdom",
+    photo: "/testimonials/gourav.jpeg",
+    quote:
+      "Working with Cling Info Tech was an absolute pleasure throughout. In today's fiercely competitive market, finding a partner who truly understands your needs is invaluable, and Cling Info Tech excels exceptionally in this regard.",
+  },
+  {
+    name: "Shubhanshu Srivastava",
+    photo: "/testimonials/shubhanshu.jpeg",
+    quote:
+      "Cling Info Tech' professionalism and efficiency surpassed our expectations, understanding our needs exceptionally well. Rarely do we find such a reliable partner in today's market. Their dedication sets them apart.",
+  },
+];
+
 export const leaders = [
   { name: "Ramesh Singh", role: "Co-founder & Director", photo: "/team/ramesh.png" },
   { name: "Ashi Gupta", role: "Managing Director", photo: "/team/ashi.png" },
